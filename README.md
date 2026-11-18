@@ -10,8 +10,8 @@ It was built in the Robotics Club BARAM at Kwangwoon University from September t
 Only the teams are known before kickoff. The in-match statistics that explain a result are not.
 This project closes the gap with two LSTM stages.
 
-1. **Stage 1** predicts the home share of five match statistics from the two teams.
-2. **Stage 2** predicts win, draw or loss from the two teams and the Stage 1 statistics.
+**Stage 1** predicts the home share of five match statistics from the two teams.
+**Stage 2** predicts win, draw or loss from the two teams and the Stage 1 statistics.
 
 ```
 home team, away team
@@ -134,7 +134,6 @@ This is a single match and not a performance measure.
 
 ## Limitations
 
-- Every sample has a sequence length of 1. The LSTM sees one time step and no match history.
 - The team is described by one fixed index. Recent form, lineups and injuries are not used.
 - Stage 2 is trained on true statistics and tested on true statistics. The end-to-end accuracy of the two stages is not measured by the training scripts.
 - The crawler relies on XPaths of the site layout in autumn 2023. It is untested on the current site layout and may need updates.
